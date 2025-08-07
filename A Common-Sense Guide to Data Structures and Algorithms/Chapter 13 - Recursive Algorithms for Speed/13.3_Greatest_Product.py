@@ -34,7 +34,7 @@ def partition(array, left, right):
         while r >= l and array[r] > pivot:
             r -= 1
 
-        # If we reach a crossroad, exit the loop
+        # Once the two pointers meet, we're done with the swapping
         if l >= r:
             break
 
