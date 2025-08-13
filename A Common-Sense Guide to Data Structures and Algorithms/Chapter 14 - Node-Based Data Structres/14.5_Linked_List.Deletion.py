@@ -30,9 +30,6 @@ class LinkedList:
         else:
             raise IndexError("Index Out of Bounds")
 
-
-
-
 # Create the nodes
 node_1 = Node('once')
 node_2 = Node('upon')
