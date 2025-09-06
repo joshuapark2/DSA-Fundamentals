@@ -7,6 +7,23 @@ class ListNode:
         self.val = val
         self.next = next
 
+def build_linked_list(values):
+    dummy = ListNode()
+    current = dummy
+
+    for v in values:
+        current.next = ListNode(v)
+        current = current.next
+    
+    return dummy.next
+
+
+
+'''
+l1 = ListNode([1, 2, 4])
+This simply means that we created one node with values [1, 2, 4] all together.
+'''
+
 '''
 1 -> 2 -> 4
 1 -> 3 -> 4
@@ -108,9 +125,7 @@ Output: [1,1,2,3,4,4]
 
 My Output: [4]
 Expected: [1,1,2,3,4,4]
-'''
 
-'''
 What if we merged?
 1 -> 2 -> 4
 1 -> 3 -> 4
@@ -164,9 +179,6 @@ while list1 or list2:
 
 1 -> 1 -> 2 -> 4 (at 2)
 
-'''
-
-'''
 How do I interact with two LL's?
 ^ "The new list should be made by spliicing together the nodes of the first two lists"
  - ^ Cannot create a new LL
