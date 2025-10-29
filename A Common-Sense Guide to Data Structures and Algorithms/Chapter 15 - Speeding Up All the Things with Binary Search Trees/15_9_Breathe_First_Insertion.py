@@ -25,6 +25,8 @@ def build_tree(array):
   if not array or array[0] is None:
     return None
 
+  # Basically have an special type of array called queue
+  # Within our queue, we have 
   root = TreeNode(array[0])
   queue = deque([root])
   i = 1
@@ -34,7 +36,7 @@ def build_tree(array):
 
     # Left Child
     if i < len(array) and array[i] is not None:
-      current.left =TreeNode(array[i])
+      current.left = TreeNode(array[i])
       queue.append(current.left)
     i += 1
 
