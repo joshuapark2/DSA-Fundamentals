@@ -36,10 +36,11 @@ def inorderTraversal(root):
     result = []
 
     def algorithm(node):
-        if not root:
+        if not node:
             return None
         algorithm(node.left)
         result.append(node.val)
         algorithm(node.right)
+
     algorithm(root)
     return result

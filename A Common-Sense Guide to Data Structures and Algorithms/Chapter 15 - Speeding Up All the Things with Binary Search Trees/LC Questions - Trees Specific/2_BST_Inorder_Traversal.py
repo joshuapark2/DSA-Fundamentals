@@ -15,7 +15,7 @@ def inorderTraversalRecursion(root):
 
     def inorder(node):
         # Base Case
-        if not root:
+        if not node:
             return
         inorder(node.left)
         result.append(node.val)
