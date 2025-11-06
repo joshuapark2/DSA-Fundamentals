@@ -10,14 +10,14 @@ class TreeNode:
 def preorderTraversal(root):
     answer = []
 
-    def algorithm(node):
+    def preorder(node):
         if not node:
             return None
         answer.append(node.val)
-        algorithm(node.left)
-        algorithm(node.right)
+        preorder(node.left)
+        preorder(node.right)
     
-    algorithm(root)
+    preorder(root)
     return answer
 
 '''
