@@ -11,13 +11,14 @@ class TreeNode:
 def postorderTraversal(root):
     answer = []
 
-    def algorithm(node):
+    def postorder(node):
         if not node:
             return None
 
-        algorithm(node.left)
-        algorithm(node.right)
+        postorder(node.left)
+        postorder(node.right)
         answer.append(node.val)
     
-    algorithm(root)
+    postorder(root)
     return answer
+

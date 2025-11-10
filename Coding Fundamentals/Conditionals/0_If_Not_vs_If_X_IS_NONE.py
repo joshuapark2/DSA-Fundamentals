@@ -28,7 +28,11 @@ if not name:
     print('name is empty') # Won't print sine 'Alice' is not falsy
 
 '''
-if not x vs. if x is None biggest differences
+'if not x' 
+    vs 
+'if x is None' 
+
+biggest differences
     - if not x will check for other falsy values
     - if x is None will only check if x is the None object
 '''

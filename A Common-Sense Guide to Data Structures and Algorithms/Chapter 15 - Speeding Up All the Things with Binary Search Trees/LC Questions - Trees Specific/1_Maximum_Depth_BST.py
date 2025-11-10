@@ -14,14 +14,14 @@ class TreeNode:
   def __repr__(self):
     return f"TreeNode(val={self.val}, left={self.left}, right={self.right})"
 
-  def maxDepth(self, root):
-      if not root:
-          return 0
-      
-      leftHeight = self.maxDepth(root.left)
-      rightHeight = self.maxDepth(root.right)
-      
-      return max(leftHeight, rightHeight) + 1
+def maxDepth(root):
+    if not root:
+        return 0
+    
+    leftHeight = maxDepth(root.left)
+    rightHeight = maxDepth(root.right)
+    
+    return max(leftHeight, rightHeight) + 1
 '''
 def maxDepth(root):
     def findHeight(node):
@@ -55,3 +55,5 @@ def maxDepthV2(root):
         findHeight(node.right) + 1
     
     return findHeight(root)
+
+

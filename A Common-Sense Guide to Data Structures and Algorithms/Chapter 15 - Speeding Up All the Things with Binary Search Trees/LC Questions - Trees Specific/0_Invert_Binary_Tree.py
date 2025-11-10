@@ -15,15 +15,16 @@ class TreeNode:
     self.right = right
 
 
-def invertTree(root):
-  if not root:
+def invertTree(node):
+  if not node:
     return None
 
-  temp = root.left
-  root.left = root.right
-  root.right = temp
+  temp = node.left
+  node.left = node.right
+  node.right = temp
 
-  invertTree(root.left)
-  invertTree(root.right)
+  invertTree(node.left)
+  invertTree(node.right)
 
-  return root
+  return node
+
