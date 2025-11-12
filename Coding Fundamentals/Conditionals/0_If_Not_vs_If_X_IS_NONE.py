@@ -33,8 +33,8 @@ if not name:
 'if x is None' 
 
 biggest differences
-    - if not x will check for other falsy values
-    - if x is None will only check if x is the None object
+    - 'if not x' will check for other falsy values
+    - 'if x is None' will only check if x is the None object
 '''
 my_list = []
 if not my_list:

@@ -9,7 +9,7 @@ def nodeInfo(node):
     return print(node.val, node.left, node.right)
     
 '''
-    Same as:
+    Below is same as:
         node2 = node1.left = TreeNode(4)
         node3 = node1.right = TreeNode(6)
 '''
