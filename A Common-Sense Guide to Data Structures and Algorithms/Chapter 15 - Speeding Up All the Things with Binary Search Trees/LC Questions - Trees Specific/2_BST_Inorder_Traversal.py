@@ -24,6 +24,20 @@ def inorderTraversalRecursion(root):
     inorder(root)
     return result
 
+def inorderTraversal(root):
+
+    array = []
+
+    if not root:
+        return None
+
+    inorderTraversal(root.left)
+    array.append(root.val)
+    inorderTraversal(root.right)
+
+    return array
+
+
 def print_tree(node, level=0, prefix="Root: "):
     if node:
         print("    " * level + prefix + str(node.val))
